@@ -1,0 +1,37 @@
+@import "vars"
+
+.video-wrapper
+	position: relative
+	.relation-ratio
+		padding-top: 73.7% //пропорция
+		
+	> video
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 1000px
+		vertical-align: middle
+		background-color: #000
+		&.has-media-controls-hidden::-webkit-media-controls
+			display: none
+
+.video-overlay-play-button
+	display: block
+	width: 100%
+	height: 100%
+	padding: 0
+	position: absolute
+	top: 0
+	left: 0
+	border: none
+	cursor: pointer
+	background: rgba($main-color, .4) url('../img/play-btn.png') no-repeat 50% 50%
+	transition: all .2s
+	&:hover
+		background-position: 50% 52%
+		transition: all .2s
+	&.is-hidden
+		display: none

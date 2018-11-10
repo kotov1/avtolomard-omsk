@@ -1,0 +1,174 @@
+@import "vars"
+
+
+@media only screen and (max-width : 1199px)
+
+	/* ------------------------------------- 
+		Common styles 
+		------------------------------------- */
+
+	/* ------------------------------------- 
+		first__block 
+		------------------------------------- */
+
+
+	/**/
+
+
+
+@media only screen and (max-width : 991px)
+
+	/**/
+
+
+
+@media only screen and (max-width : 767px)
+
+	/*----- navigation -----*/
+	.nav
+		width: 36px
+		height: 36px
+		position: absolute
+		top: -36px
+		right: -36px
+		z-index: 100
+		transition: all .25s
+		cursor: pointer
+
+		&__list
+			position: fixed
+			right: -9000px
+			flex-direction: column
+			transition: all 0s
+
+		&__toggle
+			width: 30px
+			height: 30px
+			position: fixed
+			top: 35px
+			right: 15px
+			z-index: 10
+			&-ic
+				content: ""
+				width: 100%
+				height: 3px
+				margin-top: -1.5px
+				border-radius: 15px
+				background-color: #000
+				position: absolute
+				top: 50%
+				left: 0
+				z-index: 10
+				transition: all .25s
+				&::before, &::after  
+					content: ""
+					width: 100%
+					height: 3px
+					position: absolute
+					left: 0
+					border-radius: 15px
+					background-color: #000
+					transition: all .25s					
+				&::before
+					top: -8px
+				&::after 
+					top: 8px
+	
+	.nav-expanded 
+		width: 100%
+		height: 100%
+		position: fixed
+		right: 0
+		top: 0
+		border-radius: 0px
+		background-color: #f1f1f1
+		line-height: 2em
+		text-align: center
+		transition: all .25s
+		overflow-y: auto
+		overflow-x: hidden
+		.nav__list
+			position: relative
+			right: 0
+			padding-top: 100px
+			text-align: center
+			transition: all .1s
+			z-index: 2
+			
+		.nav__link
+			display: block
+			padding: 1.5rem 0
+			font-size: 1em
+			text-decoration: none
+			color: #000
+			transition: all .15s
+			&:hover 
+				background-color: rgba(0,0,0,.1)
+				text-decoration: none
+				transition: all .15s
+	
+		.nav__toggle-ic
+			background-color: transparent
+			transition: all .25s
+			&::before, &::after 
+				transition: all .25s
+				top: 0
+			&::before
+				transform: rotate(45deg)
+			&:after 
+				transform: rotate(-45deg)
+
+
+	/**/
+
+
+@media only screen and (max-width : 575px)
+
+	/**/
+
+
+@media only screen and (max-width : 480px)
+
+	/**/
+
+
+
+@media only screen and (max-width : 320px)
+
+	/**/
+
+
+
+
+
+// @media only screen and (min-width : 320px)
+
+// 	/**/
+
+
+
+// @media only screen and (min-width : 480px)
+
+// 	/**/
+
+
+// @media only screen and (min-width : 576px)
+
+// 	/**/
+
+
+// @media only screen and (min-width : 768px)
+
+// 	/**/
+
+
+
+// @media only screen and (min-width : 992px)
+
+// 	/**/
+
+
+
+// @media only screen and (min-width : 1200px)
+
+// 	/**/

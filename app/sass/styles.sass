@@ -1,0 +1,806 @@
+@import "vars"
+
+
+/* ------------------------------------- 
+	Libs 
+	------------------------------------- */
+@import "libs"
+
+
+/* ------------------------------------- 
+	Reset 
+	------------------------------------- */
+@import "reset"
+
+
+
+
+/* grid */
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1200px
+
+
+
+
+
+/* ------------------------------------- 
+	Common styles 
+	------------------------------------- */
+.flex
+	display: flex
+	flex-wrap: wrap
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+.p-absolute
+	position: absolute
+
+.c-accent
+	color: $accent-color
+
+
+
+
+
+/*----- titles -----*/
+.page-title
+	max-width: 10.56em
+	font-size: 50px
+	font-weight: 600
+	line-height: 1.05
+	color: #ededeb
+
+.section-title
+	margin: 0
+	font-size: 34px
+	font-weight: 500
+
+
+
+
+
+
+/*----- buttons -----*/
+.btn
+	border: none
+	cursor: pointer
+	transition: all .1s
+	&:hover
+		text-decoration: none
+	&:active
+		transform: translateY(1px)
+	&:hover, &:active, &:focus
+		transition: all .1s
+	&:focus
+		outline: none
+		box-shadow: 0 2px 4px rgba($accent-color, .1)
+	&--yellow
+		background-color: $accent-color
+		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.19)
+		border: 1px solid transparent
+		&:hover
+			color: $accent-color
+			border-color: $main-color
+			background-color: $main-color
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+		&:active
+			// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba($accent-color, .2)
+
+	&--white
+		border: 1px solid #fff
+		color: #fbfbfa
+		&:hover
+			color: $main-color
+			background-color: #fff
+
+
+
+
+
+
+
+/* ------------------------------------- 
+	header 
+	------------------------------------- */
+
+.header
+	&-top
+		background-color: $main-color
+.nav-row
+	align-items: center
+
+
+/*----- navigation -----*/
+.nav
+	flex: 1 0 0
+	max-width: 100%
+	margin-right: 100px
+	padding: 2rem 0
+	&__list
+		width: 100%
+		justify-content: space-between
+		margin: 0
+		padding-left: 0
+		list-style: none
+	&__link
+		display: block
+		font-size: 1.125rem
+		font-weight: 500
+		line-height: 1
+		letter-spacing: -.02em
+		color: #fefefd
+		&:hover
+			text-decoration: none
+			color: $accent-color
+			transition: color .2s
+
+
+
+/*----- social -----*/
+.social
+	align-items: center
+	&__link
+		display: block
+		background: url('../img/sprite.png') no-repeat
+		transform: scale(.9)
+.vk-link
+	width: 40px
+	height: 24px
+	background-position: 0 0
+	transform: scale(.75)
+	&:hover
+		background-position: -230px 0
+.insta-link
+	width: 26px
+	height: 26px
+	background-position: -49px 0
+	margin-left: 8px
+	transform: scale(.8075)
+	&:hover
+		background-position: -241px -32px
+
+
+.block
+	padding: 25px 0
+	&-row
+		justify-content: space-between
+
+
+
+
+/*----- logo -----*/
+.logo
+	position: relative
+	padding-top: 34px
+	&-text
+		font-size: 48px
+		line-height: 1
+		font-weight: 600
+		text-transform: uppercase
+		position: absolute
+		top: 5px
+.heading
+	margin-top: 20px
+	font-size: 38px
+	font-weight: 600
+	position: relative
+	white-space: nowrap
+
+
+
+
+/*----- contacts -----*/
+.contacts
+	flex: 0 0 810px
+	max-width: 810px
+	font-size: 1.125rem
+	.col-1-2
+		flex: 0 0 50%
+		max-width: 50%
+		padding: 0 25px
+	a
+		color: inherit
+		&:hover
+			text-decoration: none
+			color: $accent-color
+			transition: color .2s
+
+	&__item
+		margin-bottom: 20px
+		padding: 6px 0 0 40px
+		position: relative
+		&::before
+			content: ''
+			display: block
+			background: url('../img/sprite.png') no-repeat
+			position: absolute
+			left: 0
+			z-index: 0
+
+	&__address
+		&::before
+			width: 28px
+			height: 34px
+			background-position: -85px 0
+			top: 0
+
+	&__worktime
+		&::before
+			width: 27px
+			height: 27px
+			background-position: -123px 0
+			top: 3px
+
+	&__email
+		&::before
+			width: 25px
+			height: 20px
+			background-position: -160px 0
+			top: 5px
+		a
+			font-weight: 500
+	&__phone
+		&::before
+			width: 27px
+			height: 27px
+			background-position: -195px 0
+			top: 3px
+		a
+			font-weight: 600
+
+	&__btn
+		width: 279px
+		height: 54px
+		padding: 17px 10px
+		font-size: 16px
+		line-height: 1.2
+		font-weight: 500
+		text-transform: uppercase
+
+
+
+
+
+
+/* ------------------------------------- 
+	hero
+	------------------------------------- */
+.hero
+	padding: 122px 0 112px
+	background: url('../img/bg-1.jpg') no-repeat 50% 50%
+	position: relative
+	z-index: 1
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: #000
+		opacity: 0.7
+		z-index: -1
+
+	&-col-1
+		padding-top: 50px
+
+	&-col-2
+		flex: 0 0 478px
+		max-width: 478px
+		margin-left: 100px
+
+	&-advantages
+		align-items: center
+		margin: 60px 0 0
+		padding-left: 0
+		list-style: none
+		&__item
+			border-radius: 50%
+			border: 3px solid $accent-color
+			font-size: 28px
+			font-weight: 600
+			line-height: 1
+			color: #ededeb
+			position: relative
+			&:not(:last-child)
+				margin-right: 26px
+			&--sm
+				width: 149px
+				height: 149px
+			&--md
+				width: 166px
+				height: 166px
+			&--lg
+				width: 180px
+				height: 180px
+		&__text
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	&-hint
+		margin-top: 120px
+		padding-left: 35px
+		font-size: 18px
+		font-weight: 300
+		line-height: 1.33
+		color: #ededeb
+
+	&-block
+		min-height: 520px
+		padding: 75px 70px
+		background: $main-color
+		&__txt
+			margin: 32px 0 0
+			font-size: 22px
+			font-weight: 400
+			line-height: 1.73
+			color: #fbfbfa
+
+	&__calc-btn, &__btn
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 342px
+		height: 86px
+		font-size: 23px
+	&__calc-btn
+		padding-left: 16px
+		line-height: 86px
+		&::before
+			content: '%'
+			display: inline-block
+			margin-right: 25px
+			position: absolute
+			left: 59px
+			font-size: 30px
+			color: #fff
+			transition: all .2s
+		&:hover
+			&::before
+				color: $main-color
+	&__btn
+		margin-top: 40px
+		padding-left: 31px
+		&::before
+			content: ''
+			display: inline-block
+			width: 30px
+			height: 30px
+			margin-right: 21px
+			position: absolute
+			left: 36px
+			border-radius: 50%
+			background: url('../img/sprite.png') no-repeat -201px -31px
+		&:hover
+			border-color: $accent-color
+			&::before
+				background-position: -240px -64px
+
+
+
+
+
+/* ------------------------------------- 
+	types
+	------------------------------------- */
+.types
+	padding: 70px 0 30px
+	background-color: $main-color
+
+	.section-title
+		color: #fff
+
+	&__list
+		margin-top: 30px
+		align-items: center
+	&__item
+		display: block
+		position: relative
+		margin: 0
+		padding: 40px 0
+		border: 1.5px solid transparent
+		transition: all .2s
+		overflow: hidden
+		&:hover
+			border-color: $accent-color
+			transition: all .2s
+			.types__img
+				&::after
+					opacity: 0
+					transition: all .2s
+
+	&__img
+		height: 260px
+		position: relative
+		background-color: #ededeb
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			background: $main-color
+			opacity: 0.46
+			z-index: 0
+			transition: all .2s
+			user-select: none
+
+	&__name
+		width: 100%
+		position: absolute
+		top: 40px
+		padding: 25px 15px 0
+		font-size: 22px
+		font-weight: 500
+		color: #fefefd
+		text-align: center
+		z-index: 1
+
+	
+
+
+
+
+/* ------------------------------------- 
+	advantages
+	------------------------------------- */
+.advantages
+	padding: 60px 0 110px
+
+	&__list
+		margin: 60px 0 0
+		padding-left: 0
+		list-style: none
+		justify-content: center
+	&__item
+		box-shadow: 3px 4px 16px rgba(0, 0, 0, 0.08)
+		flex: 0 0 488px
+		max-width: 488px
+		height: 138px
+		margin: 0 30px 40px
+		padding: 30px 20px 30px 95px
+		font-size: 20px
+		line-height: 1.3
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			z-index: 0
+			background: url('../img/sprite.png') no-repeat
+		&--1
+			&::before
+				width: 35px
+				height: 36px
+				background-position: 0 -39px
+				left: 31px
+		&--2
+			&::before
+				width: 36px
+				height: 50px
+				background-position: -45px -39px
+				left: 32px
+		&--3
+			&::before
+				width: 48px
+				height: 48px
+				background-position: -91px -40px
+				left: 24px
+		&--4
+			&::before
+				width: 43px
+				height: 50px
+				background-position: -150px -43px
+				left: 33px
+
+
+
+
+
+
+/* ------------------------------------- 
+	exapmles
+	------------------------------------- */
+.examples
+	padding: 60px 0 110px
+	background-color: #f8f8f8
+
+	&__slider
+		margin-top: 85px
+	&__slide
+		background-color: #fff
+
+
+	&__img
+		flex: 0 0 585px
+		max-width: 585px
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		overflow: hidden
+		.img-responsive
+			width: 100%
+
+		.status-hint
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			right: 0
+			bottom: 160px
+			width: 290px
+			height: 95px
+			border: 4px solid currentColor
+			font-size: 30px
+			font-weight: 900
+			text-transform: uppercase
+			color: #fb1111
+			transform-origin: 100% 100%
+			transform: rotate(-22deg)
+
+	&__content
+		flex: 1 0 0
+		max-width: 100%
+		padding: 55px 80px
+	
+	&__title
+		margin-bottom: 2em
+		font-size: 24px
+		font-weight: 500
+		text-align: center
+
+	&__text
+		font-size: 22px
+		font-weight: 300
+		line-height: 1.36
+		&--accent
+			margin-bottom: 40px
+			font-weight: 400
+
+
+
+/* Slick navigation */
+.slick-prev, .slick-next
+	font-size: 0
+	line-height: 0
+	position: absolute
+	top: 50%
+	display: block
+	padding: 0
+	width: 17px
+	height: 17px
+	border: none
+	border-bottom: 1.5px solid $main-color
+	border-right: 1.5px solid $main-color
+	outline: none
+	color: transparent
+	background: transparent
+	cursor: pointer
+	opacity: 0.7
+	&:hover, &:focus
+		&:not(.slick-disabled)
+			opacity: 1
+			transition: all .1s
+	&.slick-disabled
+		cursor: default
+
+.slick-prev
+	&:hover, &:focus
+		color: transparent
+		outline: none
+		background: transparent
+
+.slick-next
+	&:hover, &:focus
+		color: transparent
+		outline: none
+		background: transparent
+		
+.slick-prev
+	left: -40px
+	transform: translateY(-50%) scaleY(1.1) rotate(135deg)
+.slick-next
+	right: -40px
+	transform: translateY(-50%) scaleY(1.1) rotate(-45deg)
+
+
+.slick-dots
+	margin: 50px 0 0
+	padding-left: 0
+	list-style: none
+	text-align: center
+	li
+		display: inline-block
+	button
+		display: block
+		margin: 0 10px
+		padding: 0
+		font-size: 0
+		background: transparent
+		width: 10px
+		height: 10px
+		border: 2px solid #8e8e8e
+		border-radius: 50%
+		transition: all .2s
+		&:focus
+			outline: none
+			box-shadow: 0 0 3px rgba(#000, .9)
+	.slick-active
+		button
+			background-color: $main-color
+			border-color: $main-color
+			transition: all .2s
+
+
+	
+
+
+
+
+/* ------------------------------------- 
+	info
+	------------------------------------- */
+.info
+	padding: 65px 0 130px
+
+	&__block
+		margin-top: 85px
+
+	&__video
+		flex: 0 0 575px
+		max-width: 575px
+		height: 425px
+		order: 1
+
+	&__content
+		flex: 1 0 0
+		max-width: 100%
+		padding-right: 25px
+		font-size: 20px
+		font-weight: 300
+		line-height: 1.7
+		p
+			margin-bottom: 3.125rem
+
+	&__text
+		margin-bottom: 45px
+		max-height: 38.125rem
+		overflow: hidden
+
+	.mb-0
+		margin-bottom: 0
+
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+
+
+/*----- video -----*/
+@import "video"
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- 
+	faq
+	------------------------------------- */
+.faq
+	padding: 65px 0 130px
+	background-color: #f8f8f8
+
+	&__box
+		margin-top: 60px
+		padding: 55px 65px 35px
+		background-color: #fff
+		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05)
+
+	&__accordion
+		margin: 0
+		padding-left: 0
+		list-style: none
+		li:not(:last-child)
+			margin-bottom: 40px
+
+	&__question
+		padding: 0 0 0 50px
+		font-size: 22px
+		font-weight: 500
+		line-height: 1.36
+		position: relative
+		cursor: pointer
+		&:focus
+			outline: none
+		&::before
+			content: ''
+			display: block
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			position: absolute
+			left: 0
+			top: 10px
+			background-color: $main-color
+			z-index: 0
+		&.active
+			color: $accent-color
+
+	&__answer
+		margin: 0
+		padding: 20px 0 0 50px
+		font-size: 20px
+		font-weight: 300
+		line-height: 1.5
+
+	.more-link
+		margin-top: 60px
+
+
+.js-accordion-content
+	display: none
+
+.more-link
+	display: inline-block
+	font-size: 18px
+	font-weight: 600
+	text-transform: uppercase
+	color: $main-color
+	transition: all .1s
+	&:hover
+		text-decoration: none
+		color: $accent-color
+		transition: all .1s
+
+
+
+
+
+
+/* ------------------------------------- 
+	Media styles 
+	------------------------------------- */
+@import "media"
